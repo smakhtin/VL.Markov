@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="FYJhDg79oK0OH8NEzFwlpZ" LanguageVersion="2020.1.0.53" Version="0.128">
+  <NugetDependency Id="UeQAPfEVnRXLn4u3Bkk2NN" Location="VL.CoreLib" Version="2020.1.0" />
+  <Patch Id="UK5aopwLg2qLk9mZd3pYYI">
+    <Canvas Id="NeSXwETQI7tN4Xc7uFkiOh" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="Bb2YEf11q1IN5sBaTULvVs">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="O89yWBp6FxxOIJc6vZVctL">
+        <Canvas Id="QuJxWLDSlvPL565HVDVCOz" CanvasType="Group">
+          <Node Bounds="375,188,75,19" Id="VZtUiRgtQALL0tScvYq5O5">
+            <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="VL.Markov.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MarkovChain" />
+            </p:NodeReference>
+            <Pin Id="Ewh713fl0cCPhjtOTnxeb0" Name="Order" Kind="InputPin" />
+            <Pin Id="EG2Xq2YGhdoPKsNWi7YXfC" Name="Sentences" Kind="InputPin" />
+            <Pin Id="MpLGJRJ1yWhOGriBBkg9L4" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="376,263,98,19" Id="TJN9qhhqR7cLwVjoNXT8Tt">
+            <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="VL.Markov.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="GenerateSentence" />
+            </p:NodeReference>
+            <Pin Id="U16H90ha5YYPbJscnbmMPT" Name="Chain" Kind="InputPin" />
+            <Pin Id="ETR0K0pOHQqNJSyUPebPdK" Name="Seeds" Kind="InputPin" />
+            <Pin Id="IrYegVvc4UmNtv8bnItHez" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="TXpKUSg6X1sM565BLh2AAA" Bounds="447,53,218,115" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="String" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:Value>
+              <Item>Once upon a time</Item>
+              <Item>Once there was a pig</Item>
+              <Item>There once was a man from Nantucket</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="IxSq5exBUekLfhutHnIc54" Comment="" Bounds="377,327,343,167" ShowValueBox="true" isIOBox="true">
+            <p:Value>
+              <Item></Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="Bq3hK7uQLRBMQyGAzz4xhg" Comment="Seeds" Bounds="718,66,41,98" ShowValueBox="true" isIOBox="true" Value="20, 28, 3, 4">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Integer32" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+          </Pad>
+        </Canvas>
+        <Patch Id="Mj254jk8Qa4NeKqy1ZENth" Name="Create" />
+        <Patch Id="NDQKQPiXbRwMNvTburqa8A" Name="Update" />
+        <ProcessDefinition Id="IPVtVsum0ncNPCGQWopLU1">
+          <Fragment Id="FdyNKEZ0wEgLacz1CFsiXy" Patch="Mj254jk8Qa4NeKqy1ZENth" Enabled="true" />
+          <Fragment Id="F1ZD5My3iIrNKZznMcOwGY" Patch="NDQKQPiXbRwMNvTburqa8A" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="ChJnkCm8aEvOTOVAGW2qF9" Ids="TXpKUSg6X1sM565BLh2AAA,EG2Xq2YGhdoPKsNWi7YXfC" />
+        <Link Id="QD0uvKB2WdELQfJHEdcQci" Ids="MpLGJRJ1yWhOGriBBkg9L4,U16H90ha5YYPbJscnbmMPT" />
+        <Link Id="MYGeoGzUWhbPEqrgEZ5vfQ" Ids="IrYegVvc4UmNtv8bnItHez,IxSq5exBUekLfhutHnIc54" />
+        <Link Id="R5LIgBy5EMRMHlHxZuCnDm" Ids="Bq3hK7uQLRBMQyGAzz4xhg,ETR0K0pOHQqNJSyUPebPdK" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="HNluWrg7umYPIqTmvsYUzx" Location="VL.Skia" Version="2020.1.0" />
+  <DocumentDependency Id="SoteOkD4qEwMwdNvHAOdVR" Location="../VL.Markov.vl" />
+</Document>
