@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>VL.Markov</id>
+    <version>0.0.1</version>
+    <summary>Markov chain generator for VL based on Markov C# library</summary>
+    <description>Markov chain generator for VL based on Markov C# library</description>
+    <authors>Vadim Smakhtin</authors>
+    <owners>natan.sinigaglia</owners>
+    <projectUrl>https://github.com/smakhtin/VL.Markov</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>VL</tags>
+    <dependencies>
+      <dependency id="Markov" version="2.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src=".\*.vl" target="" exclude="" />
+    <file src=".\**\*.vl" target="" exclude="" />
+  </files>
+</package>
