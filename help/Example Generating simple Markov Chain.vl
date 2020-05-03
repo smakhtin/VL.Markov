@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="O89yWBp6FxxOIJc6vZVctL">
         <Canvas Id="QuJxWLDSlvPL565HVDVCOz" CanvasType="Group">
-          <Node Bounds="375,188,75,19" Id="VZtUiRgtQALL0tScvYq5O5">
+          <Node Bounds="132,192,75,19" Id="VZtUiRgtQALL0tScvYq5O5">
             <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="VL.Markov.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="MarkovChain" />
@@ -24,7 +24,7 @@
             <Pin Id="EG2Xq2YGhdoPKsNWi7YXfC" Name="Sentences" Kind="InputPin" />
             <Pin Id="MpLGJRJ1yWhOGriBBkg9L4" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="376,263,98,19" Id="TJN9qhhqR7cLwVjoNXT8Tt">
+          <Node Bounds="133,267,98,19" Id="TJN9qhhqR7cLwVjoNXT8Tt">
             <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="VL.Markov.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="GenerateSentence" />
@@ -33,7 +33,7 @@
             <Pin Id="ETR0K0pOHQqNJSyUPebPdK" Name="Seeds" Kind="InputPin" />
             <Pin Id="IrYegVvc4UmNtv8bnItHez" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="TXpKUSg6X1sM565BLh2AAA" Bounds="447,53,218,115" ShowValueBox="true" isIOBox="true">
+          <Pad Id="TXpKUSg6X1sM565BLh2AAA" Bounds="203,-37,218,115" ShowValueBox="true" isIOBox="true">
             <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
               <Choice Kind="TypeFlag" Name="Spread" />
               <p:TypeArguments>
@@ -48,12 +48,12 @@
               <Item>There once was a man from Nantucket</Item>
             </p:Value>
           </Pad>
-          <Pad Id="IxSq5exBUekLfhutHnIc54" Comment="" Bounds="377,327,343,167" ShowValueBox="true" isIOBox="true">
+          <Pad Id="IxSq5exBUekLfhutHnIc54" Comment="" Bounds="134,331,591,182" ShowValueBox="true" isIOBox="true">
             <p:Value>
               <Item></Item>
             </p:Value>
           </Pad>
-          <Pad Id="Bq3hK7uQLRBMQyGAzz4xhg" Comment="Seeds" Bounds="718,66,41,98" ShowValueBox="true" isIOBox="true" Value="20, 28, 3, 4">
+          <Pad Id="Bq3hK7uQLRBMQyGAzz4xhg" Comment="Seeds" Bounds="475,70,41,98" ShowValueBox="true" isIOBox="true" Value="1, 2, 3, 4">
             <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
               <Choice Kind="TypeFlag" Name="Spread" />
               <p:TypeArguments>
@@ -63,6 +63,11 @@
               </p:TypeArguments>
             </p:TypeAnnotation>
           </Pad>
+          <Pad Id="JjGLyW6KPzfNZevLNDrdLX" Comment="Order" Bounds="134,145,35,15" ShowValueBox="true" isIOBox="true" Value="1">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
         </Canvas>
         <Patch Id="Mj254jk8Qa4NeKqy1ZENth" Name="Create" />
         <Patch Id="NDQKQPiXbRwMNvTburqa8A" Name="Update" />
@@ -70,10 +75,11 @@
           <Fragment Id="FdyNKEZ0wEgLacz1CFsiXy" Patch="Mj254jk8Qa4NeKqy1ZENth" Enabled="true" />
           <Fragment Id="F1ZD5My3iIrNKZznMcOwGY" Patch="NDQKQPiXbRwMNvTburqa8A" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="ChJnkCm8aEvOTOVAGW2qF9" Ids="TXpKUSg6X1sM565BLh2AAA,EG2Xq2YGhdoPKsNWi7YXfC" />
         <Link Id="QD0uvKB2WdELQfJHEdcQci" Ids="MpLGJRJ1yWhOGriBBkg9L4,U16H90ha5YYPbJscnbmMPT" />
         <Link Id="MYGeoGzUWhbPEqrgEZ5vfQ" Ids="IrYegVvc4UmNtv8bnItHez,IxSq5exBUekLfhutHnIc54" />
         <Link Id="R5LIgBy5EMRMHlHxZuCnDm" Ids="Bq3hK7uQLRBMQyGAzz4xhg,ETR0K0pOHQqNJSyUPebPdK" />
+        <Link Id="KCAPx6XPFPbLqxnWKc2ffQ" Ids="JjGLyW6KPzfNZevLNDrdLX,Ewh713fl0cCPhjtOTnxeb0" />
+        <Link Id="NOby2fhJEspOM4VJFWuDGa" Ids="TXpKUSg6X1sM565BLh2AAA,EG2Xq2YGhdoPKsNWi7YXfC" />
       </Patch>
     </Node>
   </Patch>

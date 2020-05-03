@@ -111,7 +111,11 @@
                       </p:NodeReference>
                       <Pin Id="VxZYEQqSBE2MEKkWXBY35J" Name="Input" Kind="StateInputPin" />
                       <Pin Id="J32ydF5FUQIO4bNaWLYBxL" Name="Items" Kind="InputPin" />
-                      <Pin Id="KfYnteDlMx2M1nzbLwLwlx" Name="Weight" Kind="InputPin" />
+                      <Pin Id="KfYnteDlMx2M1nzbLwLwlx" Name="Weight" Kind="InputPin" DefaultValue="1">
+                        <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                          <Choice Kind="TypeFlag" Name="Integer32" />
+                        </p:TypeAnnotation>
+                      </Pin>
                       <Pin Id="N6E98wNLjweLyvmNJDE3v0" Name="Output" Kind="StateOutputPin" />
                     </Node>
                   </Patch>
@@ -210,7 +214,7 @@
           <Link Id="LeUQYBPwWbaMc2PBNGygl9" Ids="Gn4jAZAsUgwP56gnTrn5sC,APP4a37WVmdMAQ1FjFmSVh" />
           <Link Id="PVav4pPgQbyOgzzlrIhd1C" Ids="CeQXBsKn1XzPEAA1embhNh,GkSjzsxEx9TQWzONCWrzj1" />
           <Link Id="Cv7XxgWpLRqOkTvQrQURF8" Ids="Iu1kClkTkNKNt1cG5VOutI,GjUGKxLyQzrPo12GZiCqAG" />
-          <Link Id="Orev9ztv9CjOkXaPeiUhIx" Ids="GjUGKxLyQzrPo12GZiCqAG,KfYnteDlMx2M1nzbLwLwlx" />
+          <Link Id="M5noduKjUUZOh4dXgNQJ2j" Ids="GjUGKxLyQzrPo12GZiCqAG,KfYnteDlMx2M1nzbLwLwlx" />
         </Patch>
       </Node>
       <!--
@@ -310,11 +314,6 @@
               </p:TypeAnnotation>
             </Pin>
           </Patch>
-          <!--
-
-    ************************  ************************
-
--->
           <ProcessDefinition Id="FB577s5LhX7MRWM7jiAOqu">
             <Fragment Id="TACs1CXbRabO2OYVlBU7b3" Patch="KcFzBt0jozEPL9n9gmwCgB" Enabled="true" />
             <Fragment Id="QPIe2wkdq9ENucvXDz2LXl" Patch="CgLlEMwhTpOQRwAPQzTUqI" Enabled="true" />
